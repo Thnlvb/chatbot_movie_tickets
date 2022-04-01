@@ -1,0 +1,213 @@
+version: "2.0" 
+
+stories: 
+
+- story: Chào hỏi
+  steps: 
+  - intent: Chao
+  - action: utter_chao
+  - intent: Dat_ve
+  - action: Chon_loai_phim
+    
+- story: Hành động
+  steps:
+  - intent: hd
+    entities:
+      - content_type: "hd"
+  - slot_was_set:
+      - content_type: "hd"
+  - action: utter_hd
+  - action: utter_nhaptenphim
+
+- story: Nhạc kịch
+  steps:
+  - intent: nk
+    entities:
+      - content_type: "nk"
+  - slot_was_set:
+      - content_type: "nk"
+  - action: utter_nk
+  - action: utter_nhaptenphim
+
+- story: Kinh dị
+  steps:
+  - intent: kd
+    entities:
+      - content_type: "kd"
+  - slot_was_set:
+      - content_type: "kd"
+  - action: utter_kd
+  - action: utter_nhaptenphim
+
+- story: Phiêu lưu
+  steps:
+  - intent: pl
+    entities:
+      - content_type: "pl"
+  - slot_was_set:
+      - content_type: "pl"
+  - action: utter_pl
+  - action: utter_nhaptenphim
+
+- story: Gia đình
+  steps:
+  - intent: gd
+    entities:
+      - content_type: "gd"
+  - slot_was_set:
+      - content_type: "gd"
+  - action: utter_gd
+  - action: utter_nhaptenphim
+
+- story: Hài
+  steps:
+  - intent: h
+    entities:
+      - content_type: "h"
+  - slot_was_set:
+      - content_type: "h"
+  - action: utter_h
+  - action: utter_nhaptenphim
+
+- story: Hoạt hình
+  steps:
+  - intent: hh
+    entities:
+      - content_type: "hh"
+  - slot_was_set:
+      - content_type: "hh"
+  - action: utter_hh
+  - action: utter_nhaptenphim
+
+- story: Tâm lý
+  steps:
+  - intent: tl
+    entities:
+      - content_type: "tl"
+  - slot_was_set:
+      - content_type: "tl"
+  - action: utter_tl
+  - action: utter_nhaptenphim
+
+- story: Tình cảm
+  steps:
+  - intent: tc
+    entities:
+      - content_type: "tc"
+  - slot_was_set:
+      - content_type: "tc"
+  - action: utter_tc
+  - action: utter_nhaptenphim
+
+- story: Hồi hợp
+  steps:
+  - intent: hoh
+    entities:
+      - content_type: "hoh"
+  - slot_was_set:
+      - content_type: "hoh"
+  - action: utter_hoh
+  - action: utter_nhaptenphim
+
+- story: Lịch sử
+  steps:
+  - intent: ls
+    entities:
+      - content_type: "ls"
+  - slot_was_set:
+      - content_type: "ls"
+  - action: utter_ls
+  - action: utter_nhaptenphim
+
+- story: Thần thoại
+  steps:
+  - intent: tt
+    entities:
+      - content_type: "tt"
+  - slot_was_set:
+      - content_type: "tt"
+  - action: utter_tt
+  - action: utter_nhaptenphim
+
+- story: Nhập tên phim
+  steps:
+  - intent: nhaptenphim
+  - action: Nhap_ten_phim
+  - action: Chon_suat_chieu
+
+- story: Nhập suất chiếu
+  steps:
+  - intent: nhapsuatchieu
+  - action: Nhap_suat_chieu
+  - action: Chon_ghe
+
+- story: Nhập ghế
+  steps:
+  - intent: nhapghe
+  - action: Nhap_ghe
+  - action: utter_xacnhan
+
+- story: Xác nhận
+  steps:
+  - intent: Xac_nhan
+  - action: Submit
+
+- story: Từ chối
+  steps:
+  - intent: Tu_choi
+  - action: utter_tuchoi
+
+- story: Xem lại thông tin
+  steps:
+  - intent: Xem_lai_ve
+  - action: Xemlaive
+
+- story: Hỏi suất chiếu phim
+  steps:
+  - intent: Hoi_suat_chieu
+  - action: Liet_ke_suat_chieu
+
+- story: Hỏi phim có không
+  steps:
+  - intent: Hoi_phim_co_khong
+  - action: Tl_phim_co_khong
+
+- story: Hỏi phim hôm nay
+  steps:
+  - intent: Hoi_phim_hom_nay
+  - action: Tl_phim_hom_nay
+
+- story: Hỏi phim ngày mai
+  steps:
+  - intent: Hoi_phim_ngay_mai
+  - action: Tl_phim_ngay_mai  
+
+- story: Hỏi phim ngày bất kì
+  steps:
+  - intent: Hoi_phim_ngay_bat_ki
+  - action: Tl_phim_ngay_bat_ki
+
+- story: Hỏi giá vé
+  steps:
+  - intent: Hoi_gia_ve
+  - action: utter_gia_ve
+
+- story: Hỏi giá ghế
+  steps:
+  - intent: Hoi_gia_ghe
+  - action: utter_gia_ghe
+
+- story: Bot
+  steps:
+  - intent: bot
+  - action: utter_bot
+
+- story: Hỏi poster
+  steps:
+  - intent: Poster
+  - action: Tl_poster
+
+- story: Tạm biệt
+  steps:
+  - intent: Tam_biet
+  - action: utter_goodbye

@@ -1,0 +1,257 @@
+version: "2.0" 
+
+nlu:
+- intent: Chao
+  examples: |
+    - Hey
+    - Hello
+    - Hi
+    - Xin chào
+    - Chào bạn
+    - Chào
+
+# - intent: Ten
+#   examples: |
+#     - Tôi tên [Hải](name_vis)
+#     - Chị tên [Nhung](name_vis)
+#     - [Nhi](name) là chị
+#     - Em tên [Ngân](name_vis)
+#     - [Như](name_vis) là em
+#     - Anh tên [Bình](name_vis)
+#     - [Thắng](name_vis) là anh
+#     - Mình là [Ngọc](name_vis)
+
+- intent: Hoi_phim_co_khong
+  examples: |
+    - Rạp có phim [Lật Mặt](movie_name) này không?
+    - [Lật Mặt](movie_name) có được chiếu ở rạp không?
+    - Có phim [Bàn Tay Diệt Quỷ](movie_name) không?
+
+- intent: Hoi_phim_hom_nay
+  examples: |
+    - [Hôm nay](today) có những phim nào?
+    - Lịch chiếu các phim [hôm nay](today) như thế nào?
+    - Lịch chiếu phim của [hôm nay](today)
+    - Những phim của [hôm nay](today)
+    - Phim của [hôm nay](today)
+
+- intent: Hoi_phim_ngay_mai
+  examples: |
+    - [Ngày mai](tomorrow) có những phim nào?
+    - Lịch chiếu các phim [ngày mai](tomorrow) như thế nào?
+    - Lịch chiếu [ngày mai](tomorrow)
+    - Những phim [ngày mai](tomorrow)
+    - Phim [ngày mai](tomorrow)
+
+- intent: Hoi_phim_ngay_bat_ki
+  examples: |
+    - [2021-10-30](day) có những phim nào?
+    - Lịch chiếu các phim [2021-10-28](day) như thế nào?
+    - Lịch chiếu phim ngày [2021-10-31](day)
+    - Những phim ngày [2021-11-21](day)
+    - Phim ngày [2021-11-10](day) là những phim gì    
+
+- intent: Hoi_gia_ve
+  examples: |
+    - Giá vé cho phim [Lật Mặt](movie_name) bao nhiêu?
+    - Giá vé như nào?
+    - Giá vé
+    - Tôi muốn hỏi giá vé
+    - Bao nhiêu một vé?
+
+- intent: Hoi_gia_ghe
+  examples: |
+    - Giá ghế bao nhiêu?
+    - Giá ghế như nào?
+    - Giá ghế
+    - Tôi muốn hỏi giá ghế
+    - Bao nhiêu cho một ghế?    
+    
+- intent: bot
+  examples: |
+    - Bạn là robot?
+    - Bạn không phải con người?
+    - Tôi đang trò chuyện với ai?
+    - Ai đang nói vậy?
+
+- intent: Poster
+  examples: |
+    - Tôi muốn xem poster phim [1990](movie_name)
+    - Poster phim [Trạng Tí](movie_name) như nào?
+    - Cho tôi coi poster [Bàn Tay Diệt Quỷ](movie_name)
+
+- intent: Dat_ve
+  examples: |
+    - Tôi muốn đặt vé phim
+    - Tôi có thể đặt vé xem phim
+    - Làm sao để đặt vé
+    - Đặt vé xem phim
+
+- intent: Hoi_suat_chieu
+  examples: |
+    - Tôi muốn xem suất chiếu phim [Bàn Tay Diệt Quỷ](movie_name)
+    - Phim [Trạng Tí] có những suất chiếu nào (movie_name)
+    - Suất chiếu phim [1990](movie_name)
+    - Tôi muốn biết suất chiếu phim [Kẻ Vô Danh](movie_name)
+
+- intent: Cam_on
+  examples: |
+    - Xin cảm ơn bạn
+    - Cảm ơn bạn nha
+    - Cảm ơn bot
+
+- intent: Tam_biet
+  examples: |
+    - bye
+    - goodbye
+    - bye bye
+    - tạm biệt
+    - chào tạm biệt
+    - tạm biệt bạn
+
+- intent: Xac_nhan
+  examples: |
+    - Tôi đồng ý
+    - Yes
+    - Tất nhiên
+    - Đúng vậy
+    - Tôi xác nhận
+    - Xác nhận
+
+- intent: Tu_choi
+  examples: |
+    - No
+    - Không
+    - Không bao giờ
+    - Tôi không
+    - Tôi không đồng ý
+    - Không xác nhận
+
+- intent: hd
+  examples: |
+    - Tôi chọn [hành động]{"entity": "content_type"}
+    - Đó là [hành động]{"entity": "content_type"}
+    - Chọn [hành động]{"entity": "content_type"}
+
+- intent: nk
+  examples: |
+    - Tôi chọn [nhạc kịch]{"entity": "content_type"}
+    - Đó là [nhạc kịch]{"entity": "content_type"}
+    - Chọn [nhạc kịch]{"entity": "content_type"}
+
+- intent: kd
+  examples: |
+    - Tôi chọn [kinh dị]{"entity": "content_type"}
+    - Đó là [kinh dị]{"entity": "content_type"}
+    - Chọn [kinh dị]{"entity": "content_type"}
+
+- intent: pl
+  examples: |
+    - Tôi chọn [phiêu lưu]{"entity": "content_type"}
+    - Đó là [phiêu lưu]{"entity": "content_type"}
+    - Chọn [phiêu lưu]{"entity": "content_type"}
+
+- intent: gd
+  examples: |
+    - Tôi chọn [gia đình]{"entity": "content_type"}
+    - Đó là [gia đình]{"entity": "content_type"}
+    - Chọn [gia đình]{"entity": "content_type"}
+
+- intent: h
+  examples: |
+    - Tôi chọn [hài]{"entity": "content_type"}
+    - Đó là [hài]{"entity": "content_type"}
+    - Chọn [hài]{"entity": "content_type"}
+
+- intent: hh
+  examples: |
+    - Tôi chọn [hoạt hình]{"entity": "content_type"}
+    - Đó là [hoạt hình]{"entity": "content_type"}
+    - Chọn [hoạt hình]{"entity": "content_type"}
+
+- intent: tl
+  examples: |
+    - Tôi chọn [tâm lý]{"entity": "content_type"}
+    - Đó là [tâm lý]{"entity": "content_type"}
+    - Chọn [tâm lý]{"entity": "content_type"}
+
+- intent: tc
+  examples: |
+    - Tôi chọn [tình cảm]{"entity": "content_type"}
+    - Đó là [tình cảm]{"entity": "content_type"}
+    - Chọn [tình cảm]{"entity": "content_type"}
+
+- intent: hoh
+  examples: |
+    - Tôi chọn [hồi hợp]{"entity": "content_type"}
+    - Đó là [hồi hợp]{"entity": "content_type"}
+    - Chọn [hồi hợp]{"entity": "content_type"}
+
+- intent: ls
+  examples: |
+    - Tôi chọn [lịch sử]{"entity": "content_type"}
+    - Đó là [lịch sử]{"entity": "content_type"}
+    - Chọn [lịch sử]{"entity": "content_type"}
+
+- intent: tt
+  examples: |
+    - Tôi chọn [thần thoại]{"entity": "content_type"}
+    - Đó là [thần thoại]{"entity": "content_type"}
+    - Chọn [thần thoại]{"entity": "content_type"}
+
+- intent: nhaptenphim
+  examples: |
+    - [1990](nhaptenphim)
+    - [Bàn Tay Diệt Quỷ](nhaptenphim)
+    - [Trạng Tí](nhaptenphim)
+    - [Cầu Hồn](nhaptenphim)
+    - [Điệp Viên Siêu Lầy](nhaptenphim)
+    - [Ong Nhí Phiêu Lưu Ký](nhaptenphim)
+    - [Rừng Thế Mạng](nhaptenphim)
+    - [Đêm Tối Rực Rỡ](nhaptenphim)
+    - [Cục Nợ Hóa Cục Cưng](nhaptenphim)
+    - [Quỳnh Hoa Nhất Dạ](nhaptenphim)
+
+- intent: nhapsuatchieu
+  examples: |
+    - [17:20](nhapsuatchieu)
+    - [18:20](nhapsuatchieu)
+    - [14:10](nhapsuatchieu)
+    - [20:20](nhapsuatchieu)
+    - [16:30](nhapsuatchieu)
+    - [13:20](nhapsuatchieu)
+    - [09:50](nhapsuatchieu)
+    - [12:30](nhapsuatchieu)
+    - [10:00](nhapsuatchieu)
+    - [18:00](nhapsuatchieu)
+
+- intent: nhapghe
+  examples: |
+    - [P1A1](nhapghe)
+    - [P2A1](nhapghe)
+    - [P1B1](nhapghe)
+    - [P2B2](nhapghe)
+    - [P5C1](nhapghe)
+    - [P6D1](nhapghe)
+    - [P7E1](nhapghe)
+    - [P1F2](nhapghe)
+    - [P1G8](nhapghe)
+    - [P7G1](nhapghe)
+
+- intent: Vui_ve
+  examples: |
+    - Tuyệt vời
+    - Great
+    - Ờ mấy zing gút chóp
+    - Thật tuyệt
+    - Nice
+    - Perfect
+    - Tôi thích lắm
+
+- intent: Xem_lai_ve
+  examples: |
+    - Xem lại thông tin vé đã đặt
+    - Tôi muốn xem lại vé
+    - Vé đã đặt của tôi như nào
+    - Xem lại vé
+    - Vé của tôi

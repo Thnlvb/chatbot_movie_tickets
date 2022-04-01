@@ -1,0 +1,18 @@
+php artisan make:controller ...
+php artisan make:migration ... --create=....
+php artisan migrate:rollback
+php artisan migrate
+php artisan make:seeder ...
+php artisan db:seed --class=admin, chair_types, movie_theater, chair, format, genre, times, category_movie
+php artisan --class 
+
+cd bot_movie
+conda activate rasa
+rasa train
+rasa shell
+rasa run actions
+rasa run -m models --enable-api --cors "*" 
+
+UNION là gộp hai bản khác hoàn toàn lại với nhau (bỏ cột trùng)
+UNION ALL là gộp hai bản khác hoàn toàn lại với nhau
+

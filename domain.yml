@@ -1,0 +1,181 @@
+version: "2.0"
+
+intents:
+  - Chao
+  - Ten
+  - Hoi_phim_co_khong
+  - Hoi_phim_hom_nay
+  - Hoi_phim_ngay_mai
+  - Hoi_phim_ngay_bat_ki
+  - Hoi_gia_ve
+  - Hoi_gia_ghe
+  - bot
+  - Poster
+  - Dat_ve
+  - Hoi_suat_chieu
+  - Cam_on
+  - Tam_biet
+  - Xac_nhan
+  - Tu_choi
+  - Vui_ve
+  - hd
+  - nk
+  - kd
+  - pl
+  - gd
+  - h
+  - hh
+  - hoh
+  - tl
+  - tc
+  - ls
+  - tt
+  - nhaptenphim
+  - nhapsuatchieu
+  - nhapghe
+  - Xem_lai_ve
+
+entities: 
+# - name_vis
+# - gt
+- movie_name
+- today
+- tomorrow
+- day  
+- content_type
+- nhaptenphim
+- nhapsuatchieu  
+- nhapghe                                            
+
+slots:
+  # name_vis:
+  #   type: text
+  #   auto_fill: true
+  # gt:
+  #   type: text
+  #   auto_fill: true
+  movie_name:
+    type: text
+    auto_fill: true
+  today:
+    type: text
+    auto_fill: true
+  tomorrow:
+    type: text
+    auto_fill: true
+  day:
+    type: text
+    auto_fill: true
+  content_type:
+    type: text
+  nhaptenphim:
+    type: text
+    auto_fill: false
+  nhapsuatchieu:
+    type: text
+    auto_fill: false
+  nhapghe:
+    type: text
+    auto_fill: false
+
+responses:
+  utter_chao: 
+  - text: "Chào bạn! Bot Rasa có thể giúp gì được cho bạn?"
+
+  # utter_hoi:
+  # - text: "Bot Rasa có thể giúp gì được cho bạn {name_vis} ạ?"
+
+  # utter_name:
+  # - text: "Xin chào {gt} {name_vis}. Cho hỏi {gt} {name_vis} cần gì"
+
+  utter_bot:
+  - text: "Xin chào. Tôi là bot Rasa!"
+
+  utter_gia_ve:
+  - text: "Hiện tại rạp T'amie có giá chung cho tất cả phim là 70.000VNĐ / 1 vé (Chưa tính phụ thu)."
+
+  utter_gia_ghe:
+  - text: "Hiện tại chúng tôi phục vụ 3 loại ghế: Ghế thường (Không phụ thu); Ghế VIP (Phụ thu 10.000 VNĐ); Ghế Sweet Box (Phụ thu 20.000 VNĐ)."
+
+  utter_datve:
+  - text: "Vui lòng chọn thể loại phim"
+
+  utter_goodbye:
+  - text: "Rasa cảm ơn bạn nha. Xin tạm biệt!"
+
+  # utter_camon:
+  # - text: "Rất hân hạnh. {name_vis} cần Rasa giúp gì nữa không?"
+
+  # utter_vuive:
+  # - text: "Bạn vui Rasa cũng vui!!"
+
+  utter_tuchoi:
+  - text: "Tiếc quá. Bạn còn cần Rasa giúp gì không?"
+
+  utter_hd:
+  - text: "Một số gợi ý phim cho thể loại hành động: [Lật Mặt: 48h](http://localhost:8080/nien_luan/chi-tiet-phim/1), [Bàn Tay Diệt Quỷ](http://localhost:8080/nien_luan/chi-tiet-phim/2), [Chìa Khóa Trăm Tỷ](http://localhost:8080/nien_luan/chi-tiet-phim/16),..."
+
+  utter_nk:
+  - text: "Một số gợi ý phim cho thể loại nhạc kịch: [In The Heights: Giấc Mơ New York](http://localhost:8080/nien_luan/chi-tiet-phim/10)"
+
+  utter_kd:
+  - text: "Một số gợi ý phim cho thể loại kinh dị: [Vô Diện Sát Nhân](http://localhost:8080/nien_luan/chi-tiet-phim/14), [Cầu Hồn](http://localhost:8080/nien_luan/chi-tiet-phim/18),..."
+
+  utter_pl:
+  - text: "Hiện rạp không có phim thể loại phiêu lưu."
+
+  utter_gd:
+  - text: "Hiện rạp không có phim thể loại gia đình."
+
+  utter_h:
+  - text: "Một số gợi ý phim cho thể loại hài: [Điệp Viên Siêu Lầy](http://localhost:8080/nien_luan/chi-tiet-phim/4),..."
+
+  utter_hh:
+  - text: "Một số gợi ý phim cho thể loại hoạt hình: [Ong Nhí Phiêu Lưu Ký](http://localhost:8080/nien_luan/chi-tiet-phim/7),[Thám Tử Lừng Danh Conan: Viên Đạn Đỏ](http://localhost:8080/nien_luan/chi-tiet-phim/8),..."
+
+  utter_tl:
+  - text: "Một số gợi ý phim cho thể loại tâm lý: [Kẻ Nguyền Ta Chết](http://localhost:8080/nien_luan/chi-tiet-phim/20),[Án Mạng Trên Sông Nile](http://localhost:8080/nien_luan/chi-tiet-phim/25)"
+
+  utter_tc:
+  - text: "Một số gợi ý phim cho thể loại tình cảm: [Cục Nợ Hóa Cục Cưng](http://localhost:8080/nien_luan/chi-tiet-phim/3), [1990](http://localhost:8080/nien_luan/chi-tiet-phim/22)"
+
+  utter_ls:
+  - text: "Một số gợi ý phim cho thể loại lịch sử: [Quỳnh Hoa Nhất Dạ](http://localhost:8080/nien_luan/chi-tiet-phim/27),..."
+
+  utter_tt:
+  - text: "Một số gợi ý phim cho thể loại thần thoại: [Trạng Tí](http://localhost:8080/nien_luan/chi-tiet-phim/28)"
+
+  utter_hoh:
+  - text: "Một số gợi ý phim cho thể loại hồi hợp: [Rừng Thế Mạng](http://localhost:8080/nien_luan/chi-tiet-phim/11),[Đêm Tối Rực Rỡ](http://localhost:8080/nien_luan/chi-tiet-phim/13)..."
+
+  utter_nhaptenphim:
+  - text: "Vui lòng nhập tên phim bạn muốn đặt vé."
+
+  utter_nhapsuatchieu:
+  - text: "Vui lòng nhập suất chiếu bạn muốn đặt vé."
+
+  utter_nhapghe:
+  - text: "Vui lòng nhập tên ghế bạn chọn"
+
+  utter_xacnhan:
+  - text: "Bạn xác nhận đặt vé chứ?"
+
+actions:
+  - Tl_phim_co_khong
+  - Tl_phim_hom_nay
+  - Tl_phim_ngay_mai
+  - Tl_phim_ngay_bat_ki
+  - Tl_poster
+  - Liet_ke_suat_chieu
+  - Chon_loai_phim
+  - Nhap_ten_phim
+  - Chon_suat_chieu
+  - Nhap_suat_chieu
+  - Chon_ghe
+  - Nhap_ghe
+  - Submit
+  - Xemlaive
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
